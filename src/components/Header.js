@@ -2,6 +2,7 @@ import { AppBar, Toolbar, Tabs, Tab } from '@material-ui/core';
 import { headerStyles } from '../styles/headerStyles';
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
+import { Home, Person, Folder, Call } from '@material-ui/icons';
 
 export class Header extends Component {
   constructor(props) {
@@ -26,12 +27,14 @@ export class Header extends Component {
           <Tabs
             value={this.state.value}
             onChange={this.handleOnChange}
-            variant="fullWidth"
+            variant="scrollable"
+            scrollButtons="on"
+            classes={{ indicator: classes.indicator }}
           >
-            <Tab label="Home" />
-            <Tab label="About" />
-            <Tab label="Projects" />
-            <Tab label="Contact" />
+            <Tab icon={<Home />} label="Home" />
+            <Tab icon={<Person />} label="About" />
+            <Tab icon={<Folder />} label="Projects" />
+            <Tab icon={<Call />} label="Contact" />
           </Tabs>
         </Toolbar>
       </AppBar>

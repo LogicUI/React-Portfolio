@@ -1,7 +1,8 @@
 import { black } from '../palettes';
 import { flexMiddle } from './mixins/flexMiddle';
 
-const middle = flexMiddle('row');
+const rowMiddle = flexMiddle('row');
+const columnMiddle = flexMiddle('column');
 
 export const headerStyles = (theme) => ({
   root: {
@@ -9,9 +10,11 @@ export const headerStyles = (theme) => ({
   },
 
   tool: {
-    middle
+    "@media (min-width:768px)":{
+        rowMiddle
+    }
   },
   indicator: {
-    backgroundColor: 'white'
-  }
+    backgroundColor: 'white',
+   }
 });
