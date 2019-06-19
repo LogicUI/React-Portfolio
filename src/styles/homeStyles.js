@@ -6,7 +6,10 @@ export const homeStyles = () => ({
   h2: {
     color: 'white'
   },
-  buttons:{
-      display:flexMiddle("row")
+  buttons: {
+    display: flexMiddle('row')
+  },
+  button: {
+    margin: '5px'
   }
 });
