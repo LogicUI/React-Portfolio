@@ -4,15 +4,14 @@ import { flexMiddle } from './mixins/flexMiddle';
 const rowMiddle = flexMiddle('row');
 const columnMiddle = flexMiddle('column');
 
-export const headerStyles = (theme) => ({
+export const headerStyles = () => ({
   root: {
     backgroundColor: black
   },
 
   tool: {
-    "@media (min-width:768px)":{
-        rowMiddle
-    }
+        display:rowMiddle
+    
   },
   indicator: {
     backgroundColor: 'white',

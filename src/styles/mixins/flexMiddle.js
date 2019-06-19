@@ -1,6 +1,6 @@
 export const flexMiddle = (direction) => `
-    display:flex;
+    flex;
     justify-content:center;
     align-items:center;
     flex-direction:${direction}
-`
+`;

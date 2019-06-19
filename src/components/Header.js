@@ -2,7 +2,7 @@ import { AppBar, Toolbar, Tabs, Tab } from '@material-ui/core';
 import { headerStyles } from '../styles/headerStyles';
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
-import { Home, Person, Folder, Call } from '@material-ui/icons';
+import { Home, Person, Folder } from '@material-ui/icons';
 
 export class Header extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ export class Header extends Component {
     const { classes } = this.props;
 
     return (
-      <AppBar position="static" className={classes.root}>
+      <AppBar position="fixed" className={classes.root}>
         <Toolbar className={classes.tool}>
           <Tabs
             value={this.state.value}
@@ -34,7 +34,6 @@ export class Header extends Component {
             <Tab icon={<Home />} label="Home" />
             <Tab icon={<Person />} label="About" />
             <Tab icon={<Folder />} label="Projects" />
-            <Tab icon={<Call />} label="Contact" />
           </Tabs>
         </Toolbar>
       </AppBar>
