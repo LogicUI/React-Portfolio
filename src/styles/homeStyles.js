@@ -10,6 +10,9 @@ export const homeStyles = () => ({
     display: flexMiddle('row')
   },
   button: {
-    margin: '5px'
+    margin: '5px',
+    span: {
+      margin: '2px'
+    }
   }
 });
