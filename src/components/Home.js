@@ -2,12 +2,12 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { homeStyles } from '../styles/homeStyles';
 import { withStyles } from '@material-ui/styles';
-import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
   faLinkedinIn,
-  faFacebookSquare
+  faFacebookF
 } from '@fortawesome/free-brands-svg-icons';
 
 const Home = (props) => {
@@ -16,30 +16,24 @@ const Home = (props) => {
     <React.Fragment>
       <section className={classes.main}>
         <Typography variant="h2" gutterBottom classes={{ h2: classes.h2 }}>
-          Hello, I am John
+          Hello, I'm John
         </Typography>
         <Typography variant="h3" gutterBottom classes={{ h3: classes.h3 }}>
-          An aspiring web developer
+          I'm a software developer who is passion driven and an <br /> active
+          lifelong learner
         </Typography>
       </section>
 
       <section className={classes.buttons}>
-        <Button variant="contained" className={classes.button}>
-          <FontAwesomeIcon icon={faFacebookSquare} size="lg" pull="left" />
-          Facebook
-        </Button>
-        <Button variant="contained" color="primary" className={classes.button}>
-          <FontAwesomeIcon icon={faGithub} size="lg" pull="left" />
-          Github
-        </Button>
-        <Button
-          variant="contained"
-          color="secondary"
-          className={classes.button}
-        >
-          <FontAwesomeIcon icon={faLinkedinIn} size="lg" pull="left" />
-          Linkedin
-        </Button>
+        <IconButton aria-label="Facebook" className={classes.button}>
+          <FontAwesomeIcon icon={faFacebookF} size="lg" />
+        </IconButton>
+        <IconButton aria-label="GitHub" className={classes.button}>
+          <FontAwesomeIcon icon={faGithub} size="lg" />
+        </IconButton>
+        <IconButton aria-label="Linkedin" className={classes.button}>
+          <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+        </IconButton>
       </section>
     </React.Fragment>
   );

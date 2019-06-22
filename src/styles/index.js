@@ -2,7 +2,6 @@ import { makeStyles } from '@material-ui/styles';
 import background from '../images/background.jpeg';
 import { flexMiddle } from '../styles/mixins/flexMiddle';
 
-const columnMiddle = flexMiddle('column');
 
 export const styles = makeStyles({
   '@global': {

@@ -7,22 +7,28 @@ export const homeStyles = () => ({
     marginTop: '26px'
   },
   h2: {
-    color: 'white'
+    color: 'white',
+    fontWeight: '500',
+    marginTop: '4rem',
+    fontSize: '4rem',
+    lineHeight: '1.5'
   },
   h3: {
-    color: 'white'
+    color: 'white',
+    fontWeight: '100',
+    lineHeight: 1.5,
+    fontSize: '1.5rem'
   },
   buttons: {
-    display: flexMiddle('column'),
-    marginTop: '2rem',
-    '@media(min-width:768px)': {
-      display: flexMiddle('row')
-    }
+    display: flexMiddle('row'),
+    marginTop: '2rem'
   },
   button: {
-    margin: '10px',
-    width: '125px',
-    height: '48px',
-    fontSize: '1rem'
+    color: 'white',
+    fontSize: '32px',
+    padding: '1.5rem',
+    '&:hover': {
+      transform: 'scale(1.2)'
+    }
   }
 });
