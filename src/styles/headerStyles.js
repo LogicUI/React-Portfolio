@@ -8,6 +8,10 @@ export const headerStyles = () => ({
     backgroundColor: black
   },
 
+  MuiTabRoot: {
+    padding: '6px 2rem'
+  },
+
   tool: {
     display: rowMiddle
   },

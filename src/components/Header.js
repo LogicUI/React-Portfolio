@@ -1,8 +1,9 @@
-import { AppBar, Toolbar, Tabs, Tab } from '@material-ui/core';
+import { AppBar, Toolbar, Tabs, Tab, Link } from '@material-ui/core';
 import { headerStyles } from '../styles/headerStyles';
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
 import { Home, Person, Folder, ImageSearch } from '@material-ui/icons';
+import { Link as RouterLink } from 'react-router-dom';
 
 export class Header extends Component {
   constructor(props) {
@@ -31,10 +32,35 @@ export class Header extends Component {
             scrollButtons="on"
             classes={{ indicator: classes.indicator }}
           >
-            <Tab icon={<Home />} label="Home" />
-            <Tab icon={<Person />} label="About" />
-            <Tab icon={<ImageSearch />} label="Skills" />
-            <Tab icon={<Folder />} label="Projects" />
+            <Tab
+              icon={<Home />}
+              label="Home"
+              component={RouterLink}
+              to="/"
+              classes={{ root: classes.MuiTabRoot }}
+            />
+            <Tab
+              icon={<Person />}
+              label="About"
+              component={RouterLink}
+              classes={{ root: classes.MuiTabRoot }}
+              to="/about"
+            />
+
+            <Tab
+              icon={<ImageSearch />}
+              label="Skills"
+              to="/skills"
+              component={RouterLink}
+              classes={{ root: classes.MuiTabRoot }}
+            />
+            <Tab
+              icon={<Folder />}
+              label="Projects"
+              to="/projects"
+              component={RouterLink}
+              classes={{ root: classes.MuiTabRoot }}
+            />
           </Tabs>
         </Toolbar>
       </AppBar>
