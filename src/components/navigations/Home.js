@@ -12,8 +12,9 @@ import {
 
 const Home = (props) => {
   const { classes } = props;
-  return (
-    <React.Fragment>
+
+  const headerDetails = () => {
+    return (
       <section className={classes.main}>
         <Typography variant="h2" gutterBottom classes={{ h2: classes.h2 }}>
           Hello, I'm John
@@ -23,7 +24,11 @@ const Home = (props) => {
           lifelong learner
         </Typography>
       </section>
+    );
+  };
 
+  const iconButtons = () => {
+    return (
       <section className={classes.buttons}>
         <IconButton aria-label="Facebook" className={classes.button}>
           <FontAwesomeIcon icon={faFacebookF} size="lg" />
@@ -35,6 +40,13 @@ const Home = (props) => {
           <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
         </IconButton>
       </section>
+    );
+  };
+
+  return (
+    <React.Fragment>
+      {headerDetails()}
+      {iconButtons()}
     </React.Fragment>
   );
 };

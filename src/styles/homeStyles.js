@@ -7,7 +7,7 @@ export const homeStyles = () => ({
     marginTop: '26px'
   },
   h2: {
-    color: 'white',
+    color: "lightcoral",
     fontWeight: '500',
     marginTop: '4rem',
     fontSize: '4rem',

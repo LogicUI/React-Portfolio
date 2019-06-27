@@ -5,8 +5,7 @@ import Home from './navigations/Home';
 import About from './navigations/About';
 import Skills from './navigations/Skills';
 import Project from './navigations/project';
-
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 const App = () => {
   const classes = styles();
