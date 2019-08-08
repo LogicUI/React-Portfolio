@@ -6,7 +6,7 @@ import { createMemoryHistory } from 'history';
 import { Router } from 'react-router';
 import Nav from './Nav';
 
-describe('Home component', () => {
+describe('Nav component', () => {
   describe('Links', () => {
     let history;
     beforeEach(() => {
@@ -40,7 +40,7 @@ describe('Home component', () => {
       expect(getByText('Projects')).toBeInTheDocument();
     });
 
-    it('should be able to render the Contact link', () => {
+    it('should be able to render the Contact Me link', () => {
       const { getByText } = render(
         <Router history={history}>
           <Nav />
