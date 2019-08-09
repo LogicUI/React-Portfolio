@@ -48,5 +48,26 @@ describe('Nav component', () => {
       );
       expect(getByText('Contact Me')).toBeInTheDocument();
     });
+
+    describe('menu', () => {
+      it('should be able to render the menu button correctly', () => {
+        const { getByLabelText } = render(
+          <Router history={history}>
+            <Nav />
+          </Router>
+        );
+
+        expect(getByLabelText('menuButton')).toBeInTheDocument();
+      });
+
+      it('should be able to render the menu icon correctly', () => {
+        const { getByTestId } = render(
+          <Router history={history}>
+            <Nav />
+          </Router>
+        );
+        expect(getByTestId('menuIcon')).toBeInTheDocument();
+      });
+    });
   });
 });

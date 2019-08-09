@@ -28,36 +28,49 @@ const styles = makeStyles((theme) => {
 
 const Nav = () => {
   const classes = styles();
+
   const [tabValue, setTabValue] = useState(0);
 
   const handleOnChange = (event, newValue) => {
     setTabValue(newValue);
   };
 
+  const tabLinks = () => {
+    return (
+      <Tabs
+        value={tabValue}
+        onChange={handleOnChange}
+        variant="scrollable"
+        scrollButtons="on"
+        classes={{ indicator: classes.indicator }}
+        className={classes.links}
+      >
+        <Tab label="Home" />
+        <Tab label="About" />
+        <Tab label="Projects" />
+        <Tab label="Contact Me" />
+      </Tabs>
+    );
+  };
+
+  const menuBar = () => {
+    return (
+      <IconButton
+        edge="start"
+        color="inherit"
+        aria-label="menuButton"
+        className={classes.menu}
+      >
+        <MenuIcon data-testid="menuIcon" />
+      </IconButton>
+    );
+  };
+
   return (
     <AppBar position="fixed" className={classes.root}>
       <Toolbar>
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          className={classes.menu}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Tabs
-          value={tabValue}
-          onChange={handleOnChange}
-          variant="scrollable"
-          scrollButtons="on"
-          classes={{ indicator: classes.indicator }}
-          className={classes.links}
-        >
-          <Tab label="Home" />
-          <Tab label="About" />
-          <Tab label="Projects" />
-          <Tab label="Contact Me" />
-        </Tabs>
+        {menuBar()}
+        {tabLinks()}
       </Toolbar>
     </AppBar>
   );
