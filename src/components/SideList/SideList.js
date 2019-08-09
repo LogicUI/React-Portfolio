@@ -1,10 +1,18 @@
 import React from 'react';
 import { List } from '@material-ui/core';
 import ListItem from '../ListItem/Listitem';
+import { makeStyles } from '@material-ui/core/styles';
+
+const styles = makeStyles({
+  list: {
+    width: 250
+  }
+});
 
 const SideList = () => {
+  const classes = styles();
   return (
-    <div>
+    <div className={classes.list}>
       <List>
         <ListItem text="Home" />
         <ListItem text="About" />
